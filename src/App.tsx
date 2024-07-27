@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import song from "./assets/OMI - Cheerleader (Felix Jaehn Remix) (Lyrics) (mp3cut.net).mp3";
 import img1 from "./assets/img1.jpg";
-import img3 from "./assets/img3.jpg";
+import img2 from "./assets/img2.jpg";
 function App() {
   const audioRef = useRef<HTMLAudioElement>(null);
 
@@ -45,16 +45,17 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-[#1e1e1e] flex flex-col justify-center items-center">
       <div className="bg-[rgba(255,255,255,0.1)] w-[400px] h-[400px] absolute top-3 rounded-[100%] blur-[150px] opacity-75" />
-      <div className="hidden xl:inline-block absolute p-3 w-[350px] h-[80vh] top-1/2 bg-[rgba(255,255,255,0.1)] -translate-y-1/2 left-40 -rotate-12 z-10 rounded-xl overflow-hidden">
+      <div className="absolute p-3 w-[350px] h-[80vh] top-1/2 bg-[rgba(255,255,255,0.1)] -translate-y-1/2 left-40 -rotate-12 z-10 rounded-xl overflow-hidden">
         <img
           src={img1}
           alt=""
           className="w-full h-full object-cover duration-200 hover:scale-125"
         />
       </div>
-      <div className="hidden xl:inline-block absolute p-3 w-[350px] h-[80vh] object-cover bg-[rgba(255,255,255,0.1)] top-1/2 -translate-y-1/2 right-40 rotate-12 z-30 rounded-xl overflow-hidden">
+      <div className="z-40 sm:hidden bg-[rgba(255,255,255,0.1)] absolute w-[250px] h-[300px] lg:w-[350px] lg:h-[350px] backdrop-blur-sm top-3 rounded-3xl" />
+      <div className="absolute p-3 w-[350px] h-[80vh] object-cover bg-[rgba(255,255,255,0.1)] top-1/2 -translate-y-1/2 right-40 rotate-12 z-30 rounded-xl overflow-hidden">
         <img
-          src={img3}
+          src={img2}
           alt=""
           className="w-full h-full object-cover rounded-xl duration-200 hover:scale-125"
         />
@@ -63,9 +64,9 @@ function App() {
         {lyrics.slice(0, currentLyricIndex).map((line, index) => (
           <h1
             key={index}
-            className={`text-xl ${
+            className={`text-sm lg:text-xl text-nowrap  ${
               index === currentLyricIndex - 1
-                ? "text-yellow-600"
+                ? "text-yellow-500"
                 : "text-white opacity-75"
             }`}
             style={{
