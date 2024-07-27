@@ -45,7 +45,7 @@ function App() {
   return (
     <div className="w-full min-h-screen bg-[#1e1e1e] flex flex-col justify-center items-center">
       <div className="bg-[rgba(255,255,255,0.1)] w-[400px] h-[400px] absolute top-3 rounded-[100%] blur-[150px] opacity-75" />
-      <div className="hidden xl:inline-block absolute p-3 w-[350px] h-[80vh] bg-red-300 top-1/2 bg-[rgba(255,255,255,0.1)] -translate-y-1/2 left-40 -rotate-12 z-10 rounded-xl overflow-hidden">
+      <div className="hidden xl:inline-block absolute p-3 w-[350px] h-[80vh] top-1/2 bg-[rgba(255,255,255,0.1)] -translate-y-1/2 left-40 -rotate-12 z-10 rounded-xl overflow-hidden">
         <img
           src={img1}
           alt=""
