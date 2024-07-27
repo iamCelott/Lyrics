@@ -1,7 +1,6 @@
 import { useRef, useState } from "react";
 import song from "./assets/OMI - Cheerleader (Felix Jaehn Remix) (Lyrics) (mp3cut.net).mp3";
 import img1 from "./assets/img1.jpg";
-import img2 from "./assets/img2.jpg";
 import img3 from "./assets/img3.jpg";
 function App() {
   const audioRef = useRef<HTMLAudioElement>(null);
